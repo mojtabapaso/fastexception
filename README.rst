@@ -19,8 +19,8 @@ You can use FastAPI itself as follows:
     >>>     if password.validate():
     >>>         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="message")
 
-    -> status code : 400
-    -> message : message
+    status code : 400
+    message : message
 But the simpler and more readable way to use fastexception is as follows:
 
 
@@ -31,8 +31,8 @@ But the simpler and more readable way to use fastexception is as follows:
     >>>         FastException.HTTP_400_BAD_REQUEST.http("message")
 
 
-    -> status code : 400
-    -> message : message
+    status code : 400
+    message : message
 
 You can write your desired message in http, if you don't write it, fastexception will show the appropriate message.
 
@@ -43,5 +43,5 @@ You can write your desired message in http, if you don't write it, fastexception
     >>>         FastException.HTTP_400_BAD_REQUEST.http()
 
 
-    -> status code : 400
-    -> message : Bad Request
+    status code : 400
+    message : Bad Request
