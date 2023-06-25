@@ -1,0 +1,1 @@
+fast Exception for fastapi 
