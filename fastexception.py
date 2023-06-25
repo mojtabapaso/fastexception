@@ -74,4 +74,3 @@ class FastException:
     HTTP_508_LOOP_DETECTED = Exceptions(status=508, message="Loop detected HTTP")
     HTTP_510_NOT_EXTENDED = Exceptions(status=510, message="Not extended HTTP")
     HTTP_511_NETWORK_AUTHENTICATION_REQUIRED = Exceptions(status=511, message="Network authentication required HTTP")
-
