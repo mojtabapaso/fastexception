@@ -4,7 +4,7 @@ this_directory = Path(__file__).parent
 long_description = (this_directory / "README.md").read_text()
 setup(
     name='fastexception',
-    version='0.1.1',
+    version='0.1.2',
     license='MIT',
     author='Mojtaba',
     author_email='mojtabapaso@gamil.com',
