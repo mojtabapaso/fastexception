@@ -7,7 +7,6 @@ Installing
 
     pip install fastexception
 
-
 Usage
 =======
 You can use FastAPI itself as follows:
