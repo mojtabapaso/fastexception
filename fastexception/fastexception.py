@@ -1,4 +1,5 @@
-from starlette.responses import Response
+from starlette.exceptions import HTTPException
+import http
 
 
 class FastException:
@@ -9,7 +10,7 @@ class FastException:
             self.message = message
 
         def http(self, message=None):
-            return Response(status_code=self.status, content=message or self.message)
+            raise HTTPException(status_code=self.status, detail=message or self.message)
 
     # --------------2xx----------------
     HTTP_200_OK = Exceptions(status=200, message="OK")
@@ -74,3 +75,4 @@ class FastException:
     HTTP_508_LOOP_DETECTED = Exceptions(status=508, message="Loop detected")
     HTTP_510_NOT_EXTENDED = Exceptions(status=510, message="Not extended")
     HTTP_511_NETWORK_AUTHENTICATION_REQUIRED = Exceptions(status=511, message="Network authentication required")
+# FastException.HTTP_200_OK.http()
