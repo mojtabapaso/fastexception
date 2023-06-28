@@ -7,7 +7,7 @@ this_directory = Path(__file__).parent
 setup(
 
     name='fastexception',
-    version='0.1.5',
+    version='0.1.5.1',
     license='MIT',
     author='Mojtaba',
     author_email='mojtabapaso@gamil.com',
