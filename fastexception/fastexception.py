@@ -1,4 +1,4 @@
-from starlette.exceptions import HTTPException
+from starlette.responses import Response
 
 
 class FastException:
@@ -9,7 +9,7 @@ class FastException:
             self.message = message
 
         def http(self, message=None):
-            raise HTTPException(status_code=self.status, detail=message or self.message)
+            return Response(status_code=self.status, content=message or self.message)
 
     # --------------2xx----------------
     HTTP_200_OK = Exceptions(status=200, message="OK")
